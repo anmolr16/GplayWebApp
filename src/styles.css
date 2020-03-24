@@ -1,0 +1,393 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+:root {
+    --primary-toolbar: #B0FF45;
+    --active-tab: #753DFF;
+    --active-tab-alpha: #753dff30;
+    --inactive-heads: #428003;
+    --active-heads-btns: #622AD8;
+    --btn-hover: #757AF7;
+    --primary-band: #B0FF45;
+    --secondary-band: #212121;
+    --section-header: #464646;
+    --section-hover: #c8c8c8;
+    --main-background: #ffffff;
+    --active-form-fields: #787878;
+    --spinner-loader-progress: #753DFF;
+    --txt-act: #753DFF;
+    --txt-white: #ffffff;
+    --txt-dark: #212121;
+    --txt-inact: #428003;
+    --txt-orange: orange;
+    --txt-blue: mediumblue;
+    --txt-purple: #551a8b;
+    --txt-warn: red;
+    --border-light: #dedede;
+    --status: #0012ff;
+    --status-value: #FF7700;
+    --default-nomination: #147043;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Work Sans' !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+}
+
+div,
+span,
+label {
+    cursor: default;
+}
+
+button,
+a,
+button div,
+button span {
+    cursor: pointer;
+}
+
+button:disabled,
+button:disabled span {
+    cursor: not-allowed !important;
+}
+
+div,
+button,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    font-family: 'Work Sans' !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal !important;
+}
+
+h5 {
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0 !important;
+}
+
+h6.lh-14 {
+    line-height: 14px !important;
+}
+
+.fwd {
+    width: 100% !important;
+}
+
+.fht {
+    height: 100% !important;
+}
+
+.fwdht {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.fw-sb {
+    font-weight: 500 !important;
+}
+
+.fw-b {
+    font-weight: 900 !important;
+    /* margin-right: 10px !important; */
+}
+
+.pdlr-8 {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}
+
+.pdtb-8 {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+}
+
+.pdr-5 {
+    padding-right: 5px !important;
+}
+
+.pdr-10 {
+    padding-right: 10px !important;
+}
+
+.pdl-10 {
+    padding-left: 10px !important;
+}
+
+.pdlr-10 {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.pdtb-10 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.pdtb-10 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.pd-20 {
+    padding: 20px !important;
+}
+
+.pd-4 {
+    padding: 4px !important;
+}
+
+.mr-4 {
+    margin-right: 4px !important;
+}
+
+.mr-8 {
+    margin-right: 8px !important;
+}
+
+.mr-16 {
+    margin-right: 16px !important;
+}
+
+.mr-24 {
+    margin-right: 24px !important;
+}
+
+.mr-32 {
+    margin-right: 32px !important;
+}
+
+.ml-4 {
+    margin-left: 4px !important;
+}
+
+.ml-8 {
+    margin-left: 8px !important;
+}
+
+.ml-16 {
+    margin-left: 16px !important;
+}
+
+.ml-24 {
+    margin-left: 24px !important;
+}
+
+.ml-32 {
+    margin-left: 32px !important;
+}
+
+.mt-4 {
+    margin-top: 4px !important;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-10 {
+    margin-top: 10px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.mt-24 {
+    margin-top: 24px !important;
+}
+
+.mt-32 {
+    margin-top: 32px !important;
+}
+
+.mt-90 {
+    margin-top: 85px !important;
+}
+
+.mb-4 {
+    margin-bottom: 4px !important;
+}
+
+.mb-8 {
+    margin-bottom: 8px !important;
+}
+
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+
+.mb-16 {
+    margin-bottom: 16px !important;
+}
+
+.mb-24 {
+    margin-bottom: 24px !important;
+}
+
+.mb-32 {
+    margin-bottom: 32px !important;
+}
+
+h2 {
+    line-height: 30px;
+    margin: 0 !important;
+}
+
+h3 {
+    line-height: 28px;
+    margin: 0 !important;
+}
+
+h4 {
+    line-height: 24px;
+    margin: 0 !important;
+}
+
+h6 {
+    line-height: 20px;
+    margin: 0 !important;
+}
+
+h6.fw-b,
+h5.fw-b,
+h4.fw-b,
+h3.fw-b,
+h2.fw-b {
+    font-weight: 800;
+}
+
+h6.fw-sb,
+h5.fw-sb,
+h4.fw-sb,
+h3.fw-sb,
+h2.fw-sb {
+    font-weight: 500;
+}
+
+h6.tt-u,
+h5.tt-u,
+h4.tt-u,
+h3.tt-u,
+h2.tt-u {
+    text-transform: uppercase;
+}
+
+h6.tt-l,
+h5.tt-l,
+h4.tt-l,
+h3.tt-l,
+h2.tt-l {
+    text-transform: lowercase;
+}
+
+h6.tt-ic,
+h5.tt-ic,
+h4.tt-ic,
+h3.tt-ic,
+h2.tt-ic {
+    text-transform: capitalize;
+}
+
+h6.c-xxl,
+h5.c-xxl,
+h4.c-xxl,
+h3.c-xxl,
+h2.c-xxl {
+    color: #888;
+}
+
+h6.c-l,
+h5.c-l,
+h4.c-l,
+h3.c-l,
+h2.c-l {
+    color: #444;
+    font-weight: 700;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    /* top: 64px; */
+    background: #e2e2e2;
+}
+
+.sub-container {
+    max-width: 1300px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 100%;
+}
+
+.primary-action {
+    line-height: 26px !important;
+    display: inline-block;
+    font-size: 12px;
+    padding: 0px 12px !important;
+    border-radius: 15px !important;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #9022ED;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.bottom-support-div {
+    /* // border-top: 10px; */
+    margin-bottom: 70px;
+}
+
+div.stars,
+div.stars div {
+    display: block;
+    /* Download the star image here: http://stackoverflow.com/questions/1987524/turn-a-number-into-star-rating-display-using-jquery-and-css */
+    background: url('https://testenggblob.blob.core.windows.net/icons/stars_dark.png') 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+div.stars div {
+    background-position: 0 0;
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+.overflow-y {
+    overflow-y: auto;
+}
+
+.label {
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.label-txt {
+    color: #333;
+    font-weight: 300;
+    font-size: 14px;
+}

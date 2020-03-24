@@ -1,0 +1,46 @@
+.main-heading {
+    font-size: 30px;
+    color: #212121;
+}
+
+.sub-heading {
+    font-size: 13px;
+    color: #33691E;
+    font-weight: 700;
+}
+
+.detail-content {
+    font-size: 14px;
+    color: #333333;
+    border-bottom: 0.6px solid lightgray;
+    padding-bottom: 32px;
+}
+
+.carousel {
+    background: #EEE;
+}
+
+.carousel-cell {
+    width: 28%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+}
+
+.carousel-cell.is-selected {
+    background: #ED2;
+}
+
+
+/* cell number */
+
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+}

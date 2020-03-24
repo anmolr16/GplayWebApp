@@ -1,0 +1,21 @@
+<!-- <div [formGroup]="form" *ngIf="form">
+    <div>
+        <br>
+        <div style="width:fit-content; float:left;">List of Heroes</div>
+        <button (click)="addNewHero()">A</button>
+        <br>
+        <br>
+    </div>
+    <div formArrayName="heroList">
+        <div *ngFor="let heroCntrl of heroList.controls; let i=index;" [formGroupName]="i">
+            <span style="font-size:11px">{{heroCntrl.controls.id.value}}.&nbsp;</span>
+            <input type="text" formControlName="name">
+            <input style="width:50px;" type="text" formControlName="age">
+            <button (click)="deleteHero(heroCntrl)">E</button>
+            <button (click)="deleteHero(heroCntrl.controls.id.value)">D</button>
+        </div>
+    </div>
+</div> -->
+<div>
+    <router-outlet></router-outlet>
+</div>

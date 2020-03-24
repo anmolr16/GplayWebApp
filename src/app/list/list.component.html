@@ -1,0 +1,26 @@
+<div class="main-container">
+    <div class="sub-container mt-32" fxLayout="column">
+        <div class="mb-32" fxLayout="row" fxLayoutAlign="start start">
+            <button class="primary-action" mat-button (click)="redirect(reportee)" fxLayout="row " fxLayoutAlign="start center ">
+             RE-SCRAPE
+            </button>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="start start" fxFlex style="overflow-y: auto;">
+            <div *ngFor="let app of list" class="app-card mr-8 mb-8">
+                <div fxLayout="row" fxLayoutAlign="center center" class="pdtb-8 mb-16">
+                    <img style="width: 140px; height: 140px;" [src]="app.icon">
+                </div>
+                <div class="title ml-8 mr-8 pointer" fxLayout="row" fxLayoutAlign="start start" (click)="redirect(app.appId)">
+                    {{app.title}}
+                </div>
+                <div class="company ml-8 mr-8 pointer" fxLayout="row" fxLayoutAlign="start start" (click)="redirect(app.appId)">
+                    {{app.developer}}
+                </div>
+                <div class="stars ml-8 mt-16">
+                    <div [ngStyle]="{ 'width': getStars(app.score) }"></div>
+                </div>
+            </div>
+        </div>
+        <div class="fwd bottom-support-div"></div>
+    </div>
+</div>

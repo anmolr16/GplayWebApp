@@ -1,0 +1,167 @@
+<div class="main-container ">
+    <div class="sub-container mt-32" fxLayout="column">
+        <div fxLayout="column" fxFlex class="overflow-y">
+            <div *ngIf="appDetail" class="detail-card pd-20" style="background: white; box-shadow: 0px 0px 4px 2px #888888;" fxLayout="column" fxLayoutAlign="start start" fxFlex>
+                <div class="app-info fwd mb-16" fxLayout="column" fxLayoutAlign="start start">
+                    <div class="fwd mb-32" fxLayout="row" fxLayoutAlign="start start">
+                        <div fxLayout="row" fxLayoutAlign="start start" fxFlex="18">
+                            <img style="width: 180px; height: 180px;" [src]="appDetail.icon">
+                        </div>
+                        <div fxLayout="column" fxLayoutAlign="start start" fxFlex>
+                            <div class="main-heading">
+                                {{appDetail.title}}
+                            </div>
+                            <div fxLayout="row" fxLayoutAlign="start start" class="fwd">
+                                <div class="sub-heading" fxFlex="15">
+                                    {{appDetail.developer}}
+                                </div>
+                                <div class="sub-heading" fxFlex="20">
+                                    {{appDetail.genre}}
+                                </div>
+                                <div fxFlex="60"></div>
+                                <div class="stars mr-4">
+                                    <div [ngStyle]="{ 'width': getStars(appDetail.score)}"></div>
+                                </div>
+                                <div style="font-size: 15px; color: #616161">{{appDetail.ratings | number: '2.'}}</div>
+                                <mat-icon style="font-size: 16px; color: #616161;" class="ml-4">person</mat-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fwd detail-content mb-32" innerHTML="{{appDetail.descriptionHTML}}">
+                    </div>
+                    <div class="fwd mb-32" fxLayout="column" fxLayoutAlign="start start">
+                        <div class="mb-16">
+                            REVIEWS
+                        </div>
+                        <div class="fwd detail-content" fxLayout="row" fxLayoutAlign="start start">
+                            <div fxLayout="column" fxLayoutAlign="center center" fxFlex>
+                                <div style="font-size: 64px; color: #333333;">
+                                    {{appDetail.scoreText}}
+                                </div>
+                                <div class="stars mb-8">
+                                    <div [ngStyle]="{ 'width': getStars(appDetail.score)}"></div>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign="start start">
+                                    <mat-icon style="font-size: 16px; color: #616161;" class="ml-4">person</mat-icon>
+                                    <div style="font-size: 14px; color: #616161">{{appDetail.ratings | number: '2.'}} Total</div>
+                                </div>
+                            </div>
+                            <div fxLayout="column" fxLayoutAlign="start start" fxFlex="60">
+                                <div class="fwd pd-4" fxLayout="row" fxLayoutAlign="start start">
+                                    <div> 5 &nbsp; </div>
+                                    <div style="height: 20px; background: #57bb8a;" [ngStyle]="{ 'width': getBarWidth(5)}"></div>
+                                </div>
+                                <div class="fwd pd-4" fxLayout=" row " fxLayoutAlign="start start ">
+                                    <div> 4 &nbsp; </div>
+                                    <div style="height: 20px; background: #9ace6a; " [ngStyle]="{ 'width': getBarWidth(4)}"></div>
+                                </div>
+                                <div class="fwd pd-4" fxLayout="row " fxLayoutAlign="start start ">
+                                    <div> 3 &nbsp; </div>
+                                    <div style="height: 20px; background: #ffcf02; " [ngStyle]="{ 'width': getBarWidth(3)}"></div>
+                                </div>
+                                <div class="fwd pd-4" fxLayout="row " fxLayoutAlign="start start ">
+                                    <div> 2 &nbsp; </div>
+                                    <div style="height: 20px; background: #ff9f02; " [ngStyle]="{ 'width': getBarWidth(2)}"></div>
+                                </div>
+                                <div class="fwd pd-4" fxLayout="row " fxLayoutAlign="start start ">
+                                    <div> 1 &nbsp; </div>
+                                    <div style="height: 20px; background: #ff6f31; " [ngStyle]="{ 'width': getBarWidth(1) }"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fwd" fxLayout="column" fxLayoutAlign="start start">
+                        <div class="fwd " fxLayout="column " fxLayoutAlign="start start ">
+                            <div class="mb-8 " style="font-size: 14px; color: #212121; ">
+                                WHAT'S NEW
+                            </div>
+                            <div class="fwd detail-content mb-32 " innerHTML="{{appDetail.recentChanges}} ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fwd mb-32" fxLayout="column" fxLayoutAlign="start start">
+                        <div class="fwd" fxLayout="column " fxLayoutAlign="start start ">
+                            <div class="mb-16" style="font-size: 14px; color: #212121; ">
+                                ADDITIONAL INFORMATION
+                            </div>
+                            <div class="fwd" fxLayout="row" fxLayoutAlign="start start">
+                                <div class="mb-32" fxLayout="column" fxLayoutAlign="start start" fxFlex="33">
+                                    <div class="mb-8 label">
+                                        Updated
+                                    </div>
+                                    <div class="label-txt">
+                                        {{appDetail.updated | date: 'dd MMMM yyyy'}}
+                                    </div>
+                                </div>
+                                <div class="mb-32" fxLayout="column" fxLayoutAlign="start start" fxFlex="33">
+                                    <div class="mb-8 label">
+                                        Size
+                                    </div>
+                                    <div class="label-txt">
+                                        {{appDetail.size}}
+                                    </div>
+                                </div>
+                                <div class="mb-32" fxLayout="column" fxLayoutAlign="start start" fxFlex="33">
+                                    <div class="mb-8 label">
+                                        Installs
+                                    </div>
+                                    <div class="label-txt">
+                                        {{appDetail.installs}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fwd" fxLayout="row" fxLayoutAlign="start start">
+                                <div class="mb-32" fxLayout="column" fxLayoutAlign="start start" fxFlex="33">
+                                    <div class="mb-8 label">
+                                        Current Version
+                                    </div>
+                                    <div class="label-txt">
+                                        {{appDetail.version}}
+                                    </div>
+                                </div>
+                                <div class="mb-32" fxLayout="column" fxLayoutAlign="start start" fxFlex="33">
+                                    <div class="mb-8 label">
+                                        Requires Android
+                                    </div>
+                                    <div class="label-txt">
+                                        {{appDetail.androidVersionText}}
+                                    </div>
+                                </div>
+                                <div class="mb-32" fxLayout="column" fxLayoutAlign="start start" fxFlex="33">
+                                    <div class="mb-8 label">
+                                        Content Rating
+                                    </div>
+                                    <div class="label-txt">
+                                        {{appDetail.contentRating}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fwd" fxLayout="row" fxLayoutAlign="start start">
+                                <div class="mb-32" fxLayout="column" fxLayoutAlign="start start" fxFlex="33">
+                                    <div class="mb-8 label">
+                                        Offered By
+                                    </div>
+                                    <div class="label-txt">
+                                        {{appDetail.developer}}
+                                    </div>
+                                </div>
+                                <div class="mb-32" fxLayout="column" fxLayoutAlign="start start" fxFlex="33">
+                                    <div class="mb-8 label">
+                                        Developer
+                                    </div>
+                                    <div class="label-txt mb-8" style="color: green">
+                                        {{appDetail.developerWebsite}}
+                                    </div>
+                                    <div class="label-txt" style="color: green">
+                                        {{appDetail.developerEmail}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fwd bottom-support-div"></div>
+    </div>
+</div>
